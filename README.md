@@ -1,17 +1,14 @@
-# bare-server-rust
-bare-server-rust is a fully compliant Rust implementation of [TompHTTPs' Bare Server specifications](https://github.com/tomphttp/specifications/blob/master/BareServer.md).
-This is a server that will receive requests from a service worker (or any client) and forward a request to a specified URL. 
+# DM-unbl0cker-bare-server
 
-# How to use 
-```
-git clone https://github.com/NebulaServices/bare-server-rust
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Fdragon731012%2Fdm-unbl0cker-bare-server)
+[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/dragon731012/DM-unbl0cker-bare-server)
+[![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/dragon731012/DM-unbl0cker-bare-server)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/lC_DuF)
 
-cd bare-server-rust
+How to host:
 
-cargo build && cargo run
-```
-## To-do 
-* Websocket support
+1. deploy on one of the hosting providers
+2. add the link to the "bare" section in uv/uv.config.js in your fork of DM-Unbl0cker inside the ''
+3. done!
 
-## Authors
-* [UndefinedBHVR](https://github.com/UndefinedBHVR) 
+Credits to @sauc23 for vercel compatability!
