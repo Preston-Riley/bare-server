@@ -1,14 +1,34 @@
-# DM-unbl0cker-bare-server
+<div align="center">
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Fdragon731012%2Fdm-unbl0cker-bare-server)
-[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/dragon731012/DM-unbl0cker-bare-server)
-[![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/dragon731012/DM-unbl0cker-bare-server)
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/lC_DuF)
+<kbd>
+<img style="border-radius:50%" height="150px" src="https://raw.githubusercontent.com/amethystnetwork-dev/bare-server-deployable/master/logo.png">
+</kbd>
 
-How to host:
+<h1>TOMP Bare Server</h1>
 
-1. deploy on one of the hosting providers
-2. add the link to the "bare" section in uv/uv.config.js in your fork of DM-Unbl0cker inside the ''
-3. done!
+<h3>This repository implements the TompHTTP bare server. See the specification <a href="https://github.com/tomphttp/specifications/blob/master/BareServer.md">here</a>.</h3>
 
-Credits to @sauc23 for vercel compatability!
+<a href="https://amethystnetwork-dev.github.io/utils/deploy/heroku?repo=bare-server-deployable"><img height="30px" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"><img></a>
+<a href="https://amethystnetwork-dev.github.io/docs/about-replit?repo=bare-server-deployable"><img height="30px" src="https://amethystnetwork-dev.github.io/assets/replit.svg"><img></a>
+<a href="https://railway.app/new/template?template=https://github.com/amethystnetwork-dev/bare-server-deployable"><img height="30px" src="https://img.shields.io/badge/Railway-%234f0599.svg?style=for-the-badge&logo=railway&logoColor=white"><img></a>
+</div>
+
+## Usage
+
+```bash
+
+git clone https://github.com/amethystnetwork-dev/bare-server-deployable
+
+cd bare-server-deployable
+
+npm install
+
+npm start
+
+```
+
+## Discord Server
+
+If you need help, you can join the Discord:
+
+[![Join us on Discord](https://invidget.switchblade.xyz/fzrmxgu2NR?theme=light)](https://discord.gg/fzrmxgu2NR)

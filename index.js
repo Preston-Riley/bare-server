@@ -1,32 +1,37 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const http = require('node:http');
-const { createBareServer } = require('@tomphttp/bare-server-node');
+import createBareServer from '@tomphttp/bare-server-node';
+import http from 'node:http';
 
-const httpServer = http.createServer();
+const PORT = process.env.PORT || 8080;
 
-const bareServer = createBareServer('/');
+/*
+{
+	name: 'TOMPHTTP NodeJS Bare Server Deployable',
+	repostory: 'https://github.com/amethystnetwork-dev/bare-server-deployable'
+}
+*/
 
-httpServer.on('request', (req, res) => {
-	if (bareServer.shouldRoute(req)) {
-		bareServer.routeRequest(req, res);
+const bare = createBareServer('/')
+const server = http.createServer();
+
+server.on('request', (req, res) => {
+    if (bare.shouldRoute(req)) {
+		bare.routeRequest(req, res);
 	} else {
-		res.writeHead(400);
-		res.end('Not found.');
+        res.writeHead(400);
+		res.end('400 Bad Request');
 	}
 });
 
-httpServer.on('upgrade', (req, socket, head) => {
-	if (bareServer.shouldRoute(req)) {
-		bareServer.routeUpgrade(req, socket, head);
+server.on('upgrade', (req, socket, head) => {
+	if (bare.shouldRoute(req, socket, head)) {
+		bare.routeUpgrade(req, socket, head);
 	} else {
 		socket.end();
 	}
 });
 
-httpServer.on('listening', () => {
-	console.log('HTTP server listening');
+server.on('listening', () => {
+	console.log(`Bare server started on port ${PORT}`)
 });
 
-httpServer.listen({
-	port: 8080,
-});
+server.listen({ port: PORT });
